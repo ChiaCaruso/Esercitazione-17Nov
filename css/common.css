@@ -1,3 +1,5 @@
+@import url(../css/normalize.css);
+
 /* ---BASE--- */
 *{
     box-sizing: border-box; 
@@ -112,11 +114,43 @@ header h1{
     object-fit: cover;
 }
 
+/* ---NAVBAR--- */
+
+#navbar{
+    margin: 0 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#search{
+    background: none;
+    border-style: none;
+    cursor: pointer;
+}
+
+.search-input{
+    display: none;
+}
+
+
+
+
 /* ---LIST MOVIE --- */
 
 #content{
     text-align: center;
     padding: 100px 0;
+}
+
+#content h2{
+    text-align: left;
+    margin: 70px;
 }
 
 #content ul{
@@ -179,9 +213,7 @@ article{
 }
 
 
-#article-img,
-#article-text{
-    width: 50%;
+#article-img{
     padding: 30px;
 }
 
@@ -191,13 +223,16 @@ article{
 
 #article-text{
     text-align: justify;
+    padding: 30px;
+    width: 70%;
 }
 
 /* ---FORM CREATE--- */
 
 #create{
-    width: 80%;
+    width: 50%;
     margin: 10px auto;
+    padding: 30px;
 }
 
 #create .row{

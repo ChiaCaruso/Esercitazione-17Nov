@@ -1,5 +1,31 @@
 import { render, API } from "../js/utility.js";
 
+const container = document.querySelector("#navbar");
+const btnSearch = document.querySelector("#search");
+const input = document.querySelector(".search-input");
+render(container, `
+    <h2>Movie Database</h2>
+    <ul>
+        <li><a href="#add" id= "add"><img src="../img/add.png" width="50"></a></li>
+        <li><button id= "search"><img src="../img/search.png" width="50"></button><input type="text" name="search" class="search-input" placeholder="Search" autocomplete="off"></li>
+    </ul>
+`);
+
+// btnSearch.addEventListener("click", () =>{
+
+//     input.style.display = "inline-block";
+
+    // const value = input.value.toLowerCase();
+
+    // const result = data.filter( (item) => 
+    // item.title.toLowerCase().search(value) > -1 
+    // )
+
+    // render(container, result);
+
+// });
+
+
 const list = (data) => {
     const elements = data
         .map (item => `
@@ -16,9 +42,7 @@ const list = (data) => {
     const container = document.querySelector("#content");
 
     render(container, `
-        <h2>Scegli un film</h2>
-        <ul>${elements}</ul>
-        <a href="#add"><button id= "add" class="btn">AGGIUNGI UNA NUOVA SCHEDA</button></a>`
+        <ul>${elements}</ul>`
     );
 
     const btns = [...document.querySelectorAll(".delete")];
