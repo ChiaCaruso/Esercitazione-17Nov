@@ -25,7 +25,6 @@ render(container, `
 
 // });
 
-
 const list = (data) => {
     const elements = data
         .map (item => `
