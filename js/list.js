@@ -6,8 +6,8 @@ const input = document.querySelector(".search-input");
 render(container, `
     <h2>Movie Database</h2>
     <ul>
-        <li><a href="#add" id= "add"><img src="../img/add.png" width="50"></a></li>
-        <li><button id= "search"><img src="../img/search.png" width="50"></button><input type="text" name="search" class="search-input" placeholder="Search" autocomplete="off"></li>
+        <li><a href="#add" id= "add"><img src="./img/add.png" width="50"></a></li>
+        <li><button id= "search"><img src="./img/search.png" width="50"></button><input type="text" name="search" class="search-input" placeholder="Search" autocomplete="off"></li>
     </ul>
 `);
 
@@ -34,8 +34,8 @@ const list = (data) => {
                     <div class="text-film">
                     <a href="#view-${item.id}">${item.title}</a>
                     <p>${item.year}</p>
-                    <a href="#edit-${item.id}" class="edit" ><img src="../img/edit.png" width="50"></a>
-                    <button class="delete" id="${item.id}"><img src="../img/delete.png" width="50"></button>
+                    <a href="#edit-${item.id}" class="edit" ><img src="./img/edit.png" width="50"></a>
+                    <button class="delete" id="${item.id}"><img src="./img/delete.png" width="50"></button>
                     </div></li>`)
         .join("");
 
